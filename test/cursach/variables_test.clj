@@ -5,7 +5,7 @@
 
 
 (deftest ->VariableClass-Getters
-  (def variable (create_variable "variable"))
+  (def variable (create_variable 1))
 
   (is (= 1 (.getValue variable)))
   (is (= :variable (.getType variable)))
@@ -14,7 +14,7 @@
 
 
 (deftest ->VariableClass-Setters
-  (def variable (create_variable "variable"))
+  (def variable (create_variable 1))
 
   (.setValue variable 2)
   (is (= 2 (.getValue variable)))

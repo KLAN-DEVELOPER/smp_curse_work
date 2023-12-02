@@ -6,7 +6,7 @@
 )
 
 (deftest ->DisjunctionClass-Getters
-  (def constant (create_constant "constant"))
+  (def constant (create_constant 1))
   (def disjuntion (create_disjunction  constant constant))
 
 
@@ -16,8 +16,8 @@
 )
 
 (deftest ->DisjunctionClass-BooleanTable
-  (def zero_constant (create_constant "zero_constant"))
-  (def constant (create_constant "constant"))
+  (def zero_constant (create_constant 0))
+  (def constant (create_constant 1))
 
 
   (is (= 0 (.getValue (create_disjunction  zero_constant zero_constant))))
@@ -27,8 +27,8 @@
 )
 
 (deftest ->DisjunctionClass-SolveExpr
-  (def zero_constant (create_constant "zero_constant"))
-  (def constant (create_constant "constant"))
+  (def zero_constant (create_constant 0))
+  (def constant (create_constant 1))
 
   (def inner_conjuntion (create_conjunction  zero_constant zero_constant))
   (def disjunction (create_disjunction  constant inner_conjuntion))

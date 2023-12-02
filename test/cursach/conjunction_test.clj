@@ -5,7 +5,7 @@
 )
 
 (deftest ->ConjunctionClass-Getters
-  (def constant (create_constant "constant"))
+  (def constant (create_constant 1))
   (def conjuntion (create_conjunction constant constant))
 
 
@@ -15,8 +15,8 @@
 )
 
 (deftest ->ConjunctionClass-BooleanTable
-  (def zero_constant (create_constant "zero_constant"))
-  (def constant (create_constant "constant"))
+  (def zero_constant (create_constant 0))
+  (def constant (create_constant 1))
 
 
 
@@ -29,8 +29,8 @@
 
 
 (deftest ->ConjunctionClass-SolveExpr
-  (def zero_constant (create_constant "zero_constant"))
-  (def constant (create_constant "constant"))
+  (def zero_constant (create_constant 0))
+  (def constant (create_constant 1))
 
   (def inner_conjuntion (create_conjunction  zero_constant zero_constant))
   (def conjuntion (create_conjunction  constant inner_conjuntion))

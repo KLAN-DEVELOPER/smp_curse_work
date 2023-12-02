@@ -7,7 +7,7 @@
 )
 
 (deftest ->NoExprClass-Getters
-  (def constant (create_constant "constant"))
+  (def constant (create_constant 1))
   (def no (create_no constant))
 
 
@@ -16,16 +16,16 @@
 )
 
 (deftest ->NoExprClass-BooleanTable
-  (def constant (create_constant "constant"))
-  (def zero_constant (create_constant "zero_constant"))
+  (def constant (create_constant 1))
+  (def zero_constant (create_constant 0))
 
   (is (= 0 (.getValue (create_no  constant))))
   (is (= 1 (.getValue (create_no  zero_constant))))
 )
 
 (deftest ->NoExprClass-SolveExpr
-  (def constant (create_constant "constant"))
-  (def zero_constant (create_constant "zero_constant"))
+  (def constant (create_constant 1))
+  (def zero_constant (create_constant 0))
   (def conjunction (create_conjunction  constant constant))
   (def disjunction (create_disjunction  conjunction zero_constant))
   (def no (create_no  disjunction))

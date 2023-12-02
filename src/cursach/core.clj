@@ -8,10 +8,10 @@
 )
 
 
-(def const0 (create_constant "zero_constant"))
-(def const (create_constant "constant"))
-(def var0 (create_variable "zero_variable"))
-(def var (create_variable "variable"))
+(def const0 (create_constant 0))
+(def const (create_constant 1))
+(def var0 (create_variable 0))
+(def var (create_variable 1))
 
 
 (def inner_implication (create_implication var var0))

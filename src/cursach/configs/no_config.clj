@@ -20,15 +20,3 @@
   [expr1 expr2]
   (str "!"(dnfScopeWrapper (.getDNF expr1)))
   )
-
-
-(def no_config {
-   :config_name "no"
-   :class ->ExprClass
-   :arguments {
-               :class_type :no
-               :getValue getExprValue
-               :getDnf getDnf
-               }
-   }
-)

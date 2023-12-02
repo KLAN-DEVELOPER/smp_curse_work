@@ -4,7 +4,7 @@
 )
 
 (deftest ->ConstantClass-Getters
-  (def constant (create_constant "zero_constant"))
+  (def constant (create_constant 0))
 
   (is (= 0 (.getValue constant)))
   (is (= :constant (.getType constant)))
